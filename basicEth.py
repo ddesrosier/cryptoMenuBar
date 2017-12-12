@@ -7,8 +7,6 @@ market = Market()
 def update():
     price = market.ticker('ethereum')[0]['price_usd']
     print("%s | %s" % (price,time.strftime("%H:%M:%S")))
-    # print(price)
-    # print(time.strftime("%H:%M:%S"))
 
     return "Ξ " + price
 
