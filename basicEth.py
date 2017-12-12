@@ -6,15 +6,18 @@ market = Market()
 
 def update():
     price = market.ticker('ethereum')[0]['price_usd']
-    print("%s %f" % (time.strftime("%H:%M:%S", time.localtime()), price))
-    return price
+    print("%s | %s" % (price,time.strftime("%H:%M:%S")))
+    # print(price)
+    # print(time.strftime("%H:%M:%S"))
+
+    return "Ξ " + price
 
 
-@rumps.timer(300)
+@rumps.timer(10)
 def a(sender):
     app.title = update()
 
 
-global_namespace_timer = rumps.Timer(a, 300)
-app = rumps.App(market.ticker('ethereum')[0]['price_usd'], menu=())
+global_namespace_timer = rumps.Timer(a, 10)
+app = rumps.App('cmc', menu=())
 app.run()
