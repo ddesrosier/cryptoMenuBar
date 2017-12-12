@@ -11,11 +11,11 @@ def update():
     return "Ξ " + price
 
 
-@rumps.timer(10)
+@rumps.timer(300)
 def a(sender):
     app.title = update()
 
 
-global_namespace_timer = rumps.Timer(a, 10)
+global_namespace_timer = rumps.Timer(a, 300)
 app = rumps.App('cmc', menu=())
 app.run()
