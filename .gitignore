@@ -1,2 +1,4 @@
 *.sqlite
 *.log
+setup.py
+test.py
