@@ -1,7 +1,7 @@
 # ethBar
 Updates ETH price every 5 minutes
 
-###Requires:
+### Requires:
 
 - Python 3.x
 - rumps
